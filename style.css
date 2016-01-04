@@ -1,0 +1,686 @@
+/*
+Theme Name: Web Series
+Author: Franz Noel Tanglao
+Author URI: https://fritzdenim.github.io/
+Description: Guitar Center Theme for the Web Series
+Version: 2.1.4
+License: Copyright 2015 Guitar Center 
+Tags: black, blue, gray, white
+Text Domain: webseries
+
+*/
+body {
+    background-color:#000000;
+}
+
+#mic-locker *, #mic-locker *:before, #mic-locker *:after,
+#gallery *, #gallery *:before, #gallery *:after,
+#featured-artist *, #featured-artist *:before, #featured-artist *:after,
+#previous-webisodes *, #previous-webisodes *:before, #previous-webisodes *:after {
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+}
+
+
+/* Gibson Font */
+@charset "UTF-8";
+@import url(//fonts.googleapis.com/css?family=Fjalla+One);
+@font-face {
+    font-family: 'gibsonregular';
+    src: url('/wp-content/themes/webseries/fonts/gibson-regular-webfont.eot');
+    src: url('/wp-content/themes/webseries/fonts/gibson-regular-webfont.eot?#iefix') format('embedded-opentype'), 
+        url('/wp-content/themes/webseries/fonts/gibson-regular-webfont.woff2') format('woff2'), 
+        url('/wp-content/themes/webseries/fonts/gibson-regular-webfont.woff') format('woff'), 
+        url('/wp-content/themes/webseries/fonts/gibson-regular-webfont.ttf') format('truetype'), 
+        url('/wp-content/themes/webseries/fonts/gibson-regular-webfont.svg#gibsonregular') format('svg');
+    font-weight: normal;
+    font-style: normal
+}
+@font-face {
+    font-family: 'gibsonbold';
+    src: url('/wp-content/themes/webseries/fonts/gibson-bold-webfont.eot');
+    src: url('/wp-content/themes/webseries/fonts/gibson-bold-webfont.eot?#iefix') format('embedded-opentype'), 
+        url('/wp-content/themes/webseries/fonts/gibson-bold-webfont.woff2') format('woff2'), 
+        url('/wp-content/themes/webseries/fonts/gibson-bold-webfont.woff') format('woff'), 
+        url('/wp-content/themes/webseries/fonts/gibson-bold-webfont.ttf') format('truetype'), 
+        url('/wp-content/themes/webseries/fonts/gibson-bold-webfont.svg#gibsonbold') format('svg');
+    font-weight: normal;
+    font-style: normal
+}
+@font-face {
+    font-family: 'gibsonlight';
+    src: url('/wp-content/themes/webseries/fonts/gibson-light-webfont.eot');
+    src: url('/wp-content/themes/webseries/fonts/gibson-light-webfont.eot?#iefix') format('embedded-opentype'), 
+        url('/wp-content/themes/webseries/fonts/gibson-light-webfont.woff2') format('woff2'), 
+        url('/wp-content/themes/webseries/fonts/gibson-light-webfont.woff') format('woff'), 
+        url('/wp-content/themes/webseries/fonts/gibson-light-webfont.ttf') format('truetype'), 
+        url('/wp-content/themes/webseries/fonts/gibson-light-webfont.svg#gibsonlight') format('svg');
+    font-weight: normal;
+    font-style: normal
+}
+@media only screen {
+    #gallery h2,
+    .title-container h2,
+    #previous-webisodes h2 {
+        font-size:2.875rem;
+        font-family:'gibsonlight',Arial,Helvetica,Sans-serif;
+        color:#ffffff;
+        margin:0;
+        padding:30px 0 10px 0;
+        display:block;
+        text-align:center;
+        text-transform:uppercase;
+    }
+    #gallery p,
+    #mic-locker p, 
+    #previous-webisodes p {
+        font-size:0.875rem;
+        color:#8e8e8e;
+        text-align:center;
+        margin:0 0 3% 0;
+    }    
+}
+@media only screen and (min-width: 40.0625em) {
+    #gallery h2,
+    .title-container h2,
+    #previous-webisodes h2 {
+        font-size:3.875rem;
+        font-family:'gibsonlight',Arial,Helvetica,Sans-serif;
+        color:#ffffff;
+        margin:0;
+        padding:30px 0 10px 0;
+        display:block;
+        text-align:center;
+        text-transform:uppercase;
+    }
+    #gallery p,
+    #mic-locker p, 
+    #previous-webisodes p {
+        font-size:1.8175rem;
+        color:#8e8e8e;
+        text-align:center;
+        margin:0 0 3% 0;
+    }
+}
+@media only screen and (min-width: 64.0625em) {
+    #gallery h2,
+    .title-container h2,
+    #previous-webisodes h2 {
+        font-size:3.875rem;
+        font-family:'gibsonlight',Arial,Helvetica,Sans-serif;
+        color:#ffffff;
+        margin:0;
+        padding:30px 0 10px 0;
+        display:block;
+        text-align:center;
+        text-transform:uppercase;
+    }
+    #gallery p,
+    #mic-locker p, 
+    #previous-webisodes p {
+        font-size:1.875rem;
+        color:#8e8e8e;
+        text-align:center;
+        margin:0 0 3% 0;
+    }
+}
+
+/* Navigation */
+.top-bar {
+    height:4.8125rem;
+}
+.top-bar .left-dropdown {
+    font-size:3.8125rem;
+}
+.top-bar .left-dropdown .fi-list {
+    line-height:4.8125rem;
+}
+.top-bar-section #episode-title {
+    font-size:20px;
+    padding-top:7%;
+}
+.top-bar-section ul li > a {
+    height:77px;
+}
+.top-bar-section .dropdown li a {
+    line-height:0;
+}
+
+#navigation.top-bar {
+    background-color:#ffffff;
+}
+#navigation.top-bar a {
+    background-color:#ffffff;
+    color:#339eae;
+}
+#navigation.top-bar a:hover {
+    background-color:#339eae;
+    color:#ffffff;
+}
+#navigation.top-bar a.active {
+    background-color:#ffffff;
+    color:#339eae;
+}
+#navigation.top-bar .nav {
+    background-color:#339eae;
+    color:#ffffff;
+    font-size:3.8125rem;
+}
+#navigation.top-bar .nav:hover {
+    background-color:#2d8c9a;
+    color:#ffffff;
+}
+#navigation.top-bar #episode-title {
+    cursor:default;
+    color:#333333;
+}
+#navigation.top-bar #episode-title:hover {
+    background-color:#ffffff;
+    color:#333333;
+}
+#navigation.top-bar .divider {
+    border:0;
+}
+#navigation.top-bar .dropdown {
+    width:300px;
+}
+#navigation.top-bar .dropdown a {
+    height:15%;
+    color:#777777;
+}
+#navigation.top-bar .dropdown a:hover {
+    background-color:#eeeeee;
+    color:#777777;
+}
+#navigation.top-bar .dropdown .divider a {
+    background-color:#dddddd;
+    font-size:75%;
+    line-height:2.8125rem;
+    padding:0 0.975rem 0 0.975rem;
+    margin:0;
+    text-transform:uppercase;
+}
+#navigation.top-bar .logo-wrapper .logo {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    top: -2px;
+    margin-left: -46px;
+}
+#navigation.top-bar .dropdown a {
+    font-size:1.0rem;
+    color:#555555;
+}
+#navigation.top-bar .dropdown a:hover {
+    color:#444444;
+}
+#navigation.top-bar .webisode-nav {
+    background-color:#ffffff;
+    overflow-y:scroll;
+    height:300px;
+}
+#navigation.top-bar .webisode-nav a {
+    padding:0 2rem 0 0.935rem;
+}
+#navigation.top-bar .webisode-nav a span {
+    color:#999999;
+    font-size:0.8rem;
+    float:right;
+}
+#navigation.top-bar .nav .nav-arrow {
+    height:80px;
+}
+
+
+
+
+/* Background */
+#background {
+    /*background-image:url('http://podcast.guitarcenter.dev/wp-content/themes/webseries/images/assets/main-gradient.png'),url('http://podcast.guitarcenter.dev/wp-content/themes/webseries/images/artists/broncho/main.jpg');*/
+    /* background-position:center; */
+    background-repeat:no-repeat;
+    background-size:100%;
+    background-attachment:fixed;
+    background-position:top;
+    margin:0;
+}
+
+
+/* Main */
+#featured-artist { /* */
+    font-family:'gibsonlight',Arial,Helvetica,Sans-serif;
+    text-transform:uppercase;
+    /*position:relative;*/
+    /*height:900px;*/
+    z-index:10;
+}
+#featured-artist .site {
+    text-transform:lowercase;
+    white-space: nowrap;
+    text-shadow:1px 1px 5px #000000;
+}
+#featured-artist .featured {
+    position:relative;
+    width:100%;
+    max-width:initial;
+    margin:0 0 5% 0;
+}
+#featured-artist .main-title {
+    font-size:50px;
+    color:#ffffff;
+    text-shadow:0 0 15px #0e0e0e;
+    vertical-align:bottom;
+}
+#featured-artist .featured-description {
+    color:#ffffff;
+    text-shadow:0 0 10px #000000;
+    text-transform:none;
+}
+#featured-artist .featured-video-title {
+    color:#339eae;
+    font-size:22px;
+    font-family:"gibsonlight",Arial,Helvetica,Sans-serif;
+    font-weight:bold;
+    text-shadow: 0 0 10px #000000;
+}
+#featured-artist .video-main {
+    display:block;
+    text-align:center;
+    position:relative;
+    top:40px;
+    margin-top:0;
+    margin-bottom:120px;
+}
+#featured-artist .video-main:hover .featured-video-title {
+    color:#ffffff;
+    font-size:22px;
+    font-family:"gibsonlight",Arial,Helvetica,Sans-serif;
+    text-shadow: 2px 2px 15px #000000;
+}
+#featured-artist .video-image {
+    display:inline-block;
+}
+#featured-artist .video-image-hover {
+    display:none;
+}
+#featured-artist .video-main:hover .video-image {
+    display:none;
+}
+#featured-artist .video-main:hover .video-image-hover {
+    display:inline-block;
+}
+#featured-artist .video {
+    display:block;
+    text-align:center;
+}
+#featured-artist .featured-video-subtitle {
+    font-size:15px;
+    color:#339eae;
+}
+#featured-artist .video-sub {
+    display:block;
+    text-align:center;
+}
+#featured-artist .video-sub:hover .featured-video-subtitle {
+    font-size:15px;
+    color:#ffffff;
+    text-shadow:1px 1px 15px #000000;
+}
+#featured-artist .video-sub:hover .video-image {
+    display:none;
+}
+#featured-artist .video-sub:hover .video-image-hover {
+    display:inline-block;
+}
+@media only screen {
+    #featured-artist .featured-share {
+        color:#ffffff;
+        text-shadow:0 0 10px #000000;
+        font-size:15px;
+        width:20rem;
+        margin:0 auto 0 auto;
+    }
+}
+@media only screen and (min-width: 64.0625em) {
+    #featured-artist .featured-share {
+        color:#ffffff;
+        text-shadow:0 0 10px #000000;
+        font-size:15px;
+        margin:13% 0 5% 0;
+    }
+}
+#featured-artist .featured-share span {
+    color:#339eae;
+    font-size:25px;
+}
+#featured-artist .featured-share span i {
+    vertical-align:bottom;
+    margin:0 5px 0 5px;
+}
+@media only screen {
+    #featured-artist .album {
+        text-align:center;
+    }
+    #featured-artist .album-title {
+        color:#ffffff;
+        font-size:18px;
+        background-color:none;
+        display:block;
+    }
+    #featured-artist .album-image {
+        width:120px;
+        display:block;
+        margin:0 auto 0 auto;
+    }
+    #featured-artist .album-link {
+        text-shadow:1px 1px 5px #0e0e0e;
+        display:block;
+    }
+}
+@media only screen and (min-width: 64.0625em) {
+    #featured-artist .album {
+        text-align:left;
+    }
+    #featured-artist .album-title {
+        color:#ffffff;
+        font-size:18px;
+        background-color:none;
+    }
+    #featured-artist .album-image {
+        width:120px;
+    }
+    #featured-artist .album-link {
+        text-shadow:1px 1px 5px #0e0e0e;
+    }
+}
+
+/* Photo Gallery */
+#gallery {
+    background-color:#333333;
+    margin:0 0 0 0;
+    padding:0 0 0 0;
+    position:relative;
+    z-index:10;
+}
+#gallery .row {
+   width: 100%;
+   max-width: initial;
+}
+#gallery .column:nth-child(odd) {
+    padding:5px 5px 5px 0;
+}
+#gallery .column:nth-child(even) {
+    padding:5px 0 5px 5px;
+}
+#gallery .photo figure {
+    margin:0;
+    overflow:hidden;
+}
+#gallery .photo img {
+    transition: all 0.5s ease-in-out; 
+}
+#gallery .photo img:hover {
+    transform:scale(1.1);
+}
+
+
+
+/* Mic Locker */
+#mic-locker {
+    background-color:#333333;
+    background-image:url('/wp-content/themes/webseries/images/assets/mic-locker-bg.jpg');
+    /* background-position:center; */
+    background-repeat:repeat;
+    background-size:100%;
+    height:100%;
+    /*background-attachment:fixed;*/
+    background-position:center;
+    /*min-height:500px;*/
+    padding:0 0 0 0;
+}
+#mic-locker .products-container {
+    position:relative;
+    /*
+    top:100px;
+    */
+    width:100%;
+    margin:0 auto 0 auto;
+    padding:3rem;
+}
+#mic-locker .title-container {
+    padding:0;
+    margin:0;
+    opacity:1;
+    position:relative;
+    top:0;
+    /*  
+    left:0;
+    */
+}
+#mic-locker .slick-prev:before, .slick-next:before {
+    font-size:2.375rem;
+    color:#339eae;
+}
+#mic-locker .products {
+    /*position:relative;*/
+    padding:0 30px 0 30px;
+    opacity:1;
+}
+#mic-locker .product {
+    cursor:pointer;
+    padding:0;
+    margin:5px 5px 0 5px;
+    background-size:contain;
+    /*outline-style: none;*/
+    height:270px;
+    width:auto;
+    background-repeat:no-repeat;
+    position:relative;
+}
+#mic-locker .product:hover .product-description {
+    position:absolute;
+    top:0;
+    left:0;
+    -webkit-transition:0.5s;
+    -o-transition:0.5s;
+    transition:0.5s;
+}
+
+#mic-locker .product-info {
+    font-family:'gibsonbold',Arial,Helvetica,Sans-serif;
+    text-transform:uppercase;
+    background-color:#000000;
+    opacity:0.8;
+    background-repeat:repeat;
+    height:70px;
+    width:100%;
+    padding:10px;
+    margin:0;
+    background-color:#000000;
+    position:absolute;
+    bottom:0;
+    left:0;
+    z-index:10;
+}
+#mic-locker .product-info h3 {
+    margin:0;
+    font-size:17px;
+    color:#ffffff;
+}
+#mic-locker .product-info a {
+    font-size:14px;
+}
+#mic-locker .product-description {
+    font-family:'gibsonlight',Arial,Helvetica,Sans-serif;
+    font-size:14px;
+    line-height:25px;
+    text-align:left;
+    padding:15px 10px 0 10px;
+    color:#ffffff;
+    background-color:#000000;
+    overflow-y:scroll;
+    opacity:0.8;
+    max-height:100%;
+    /*
+    position:absolute;
+    top:300px;
+    left:0;
+    */
+    -webkit-transition:0.5s;
+    -o-transition:0.5s;
+    transition:0.5s;
+}
+
+#mic-locker .slick-prev {}
+#mic-locker .slick-next {
+    right:0;
+}
+
+
+/* Previous Webisodes (will use media query) */ 
+#previous-webisodes {
+    background-color:#000000;
+    position:relative;
+}
+#previous-webisodes .inline-list {
+    position:relative;
+    left:25px;
+}
+#previous-webisode .webisode {
+    display:block;
+}
+#previous-webisodes .webisode img {
+    width:100%;
+    background-color:#222222;
+    transition: all 0.5s ease-in-out; 
+}
+#previous-webisodes figure {
+    padding:0;
+    margin:0;
+    overflow:hidden;
+}
+#previous-webisodes .webisode-title {
+    font-family:'gibsonlight',Arial,Helvetica,Sans-serif;
+    color:#ffffff;
+    text-align:center;
+    font-size:17px;
+    width:100%;
+    height:auto;
+    white-space:nowrap;
+    padding:5% 0 5% 0;
+    margin:0 0 20% 0;
+    z-index:10;
+    background-color:#222222;
+    -webkit-transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease;
+}
+#previous-webisodes .webisode:hover .webisode-title  {
+    background-color:#2d8c9a;
+    -webkit-transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease;
+}
+#previous-webisodes .webisode:hover img  {
+    transform:scale(1.1);
+}
+#previous-webisodes .more-webisodes-container {
+    text-align:center;
+    margin:0 0 100px 0;
+}
+#previous-webisodes .more-webisodes {
+    color:#339eae;
+    text-align:center;
+    padding:10px 30px 10px 30px;
+    border:2px solid #ffffff;
+    border-top-right-radius: 2em;
+    border-bottom-right-radius: 2em;
+    border-top-left-radius: 2em;
+    border-bottom-left-radius: 2em;
+}
+#previous-webisodes .more-webisodes:hover {
+    color:#ffffff;
+}
+
+
+/* Video Modal */
+#video-modal {
+    background-color:#333333;
+}
+#video-modal .video-title {
+    font-family:'gibsonregular',Arial,Helvetica,Sans-serif;
+    font-weight:bold;
+    color:#ffffff;
+    text-transform:uppercase;
+}
+
+/* Photo Modal */
+#image-modal {
+    min-height:auto;
+    background-color:#333333;
+}
+@media only screen {
+    #image-modal .button.small, .button.small {
+        display:inline-block;
+        width:20%;
+        font-size:1.8725rem;
+        padding: 0;
+        margin:0;
+        overflow:hidden;
+    }
+    #image-modal .button.small img, .button.small img {
+        height:30px;
+        width:30px;
+    }
+}
+@media only screen and (min-width: 64.0625em) {
+    #image-modal .button.small, .button.small {
+        display:inline-block;
+        width:20%;
+        font-size:0.8125rem;
+        padding: 0.0275rem 0.08125rem 0.0275rem 0.08125rem;
+        margin:0;
+        overflow:hidden;
+    }
+    #image-modal .button.small img, .button.small img {
+        height:50px;
+        width:50px;
+    }
+}
+
+#image-modal .image-photos {
+    margin:3% 0 0 0;
+}
+#image-modal .image-nav {
+    width:30%;
+    text-align:center;
+    margin:10px auto 0px auto;
+}
+
+#previous-webisodes .load-webisode-error {
+    color:#339eae;
+    font-size:0.875rem;
+}
+
+/* 404 Container */
+#container-404 {
+    background-image:url(/wp-content/themes/webseries/images/assets/mic-locker-bg.jpg);
+    margin:0 auto 0 auto;
+    padding:50px 0 50px 0;
+    display:block;
+    color:#ffffff !important;
+}
+#container-404 .h1-404 {
+    color:#ffffff;
+    font-size:50px;
+}
+.reveal-modal .close-reveal-modal {
+    top:-0.35rem;
+    right:0.35rem;
+    color:#008cba;
+    font-family:Arial, Helvetica, Sans-serif;
+    font-weight:100;
+}
+
+
