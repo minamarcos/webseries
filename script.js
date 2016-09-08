@@ -5,6 +5,7 @@
             // firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
             $(document).ready(function() {
+              $("[data-video='']").css("visibility","hidden");
               $(".products").slick({
                 infinite: true,
                 slidesToShow: 3,
