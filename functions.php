@@ -37,8 +37,7 @@ function gc_webisodes() {
         'map_meta_cap' => true,
         'capability_type' => array('webisode','webisodes'),
         'capabilities' => array(
-          'publish_posts' => 'publish_
-          s',
+          'publish_posts' => 'publish_s',
           'edit_published_posts' => 'edit_published_webisodes',
           'delete_published_posts' => 'delete_published_webisodes',
           'edit_posts' => 'edit_webisodes',
